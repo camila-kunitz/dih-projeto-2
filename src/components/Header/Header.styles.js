@@ -17,6 +17,7 @@ export const Navbar = styled.nav``
 export const NavLink = styled.a`
   color: white;
   text-transform: uppercase;
+  text-decoration: none;
   margin: 0 20px;
   cursor: pointer;
   &:hover{
