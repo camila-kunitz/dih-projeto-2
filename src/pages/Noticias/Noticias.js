@@ -1,5 +1,5 @@
 import React from 'react';
-import Pesquisa from '../Pesquisa/Pesquisa';
+import Pesquisa from '../../components/Pesquisa/Pesquisa'
 import { Titulo, PesquisaContainer } from './Noticias.styles'
 
 const Noticias = () => {

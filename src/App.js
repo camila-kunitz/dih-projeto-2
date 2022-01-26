@@ -1,6 +1,6 @@
 import Header from "./components/Header/Header";
-import Noticias from "./components/Noticias/Noticias";
-import Jogos from "./components/Jogos/Jogos";
+import Noticias from "./pages/Noticias/Noticias";
+import Jogos from "./pages/Jogos/Jogos";
 import { GlobalStyle } from "./themes/tema";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
