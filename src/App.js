@@ -1,4 +1,4 @@
-import Header from "./components/Header/Header";
+import Header from "./components/Header";
 import Noticias from "./pages/Noticias/Noticias";
 import Jogos from "./pages/Jogos/Jogos";
 import { GlobalStyle } from "./themes/tema";

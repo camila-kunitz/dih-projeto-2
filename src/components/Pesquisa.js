@@ -1,17 +1,18 @@
+import React from 'react';
 import styled from 'styled-components';
 
-export const Container = styled.div`
+const Container = styled.div`
   margin-bottom: 1rem;
 `;
 
-export const Label = styled.label`
+const Label = styled.label`
   display: block;
   font-size: 1rem;
   line-height: 1;
   padding-bottom: 0.5rem;
 `;
 
-export const Input = styled.input`
+const Input = styled.input`
   border: 1px solid #eee;
   display: block;
   width: 100%;
@@ -27,3 +28,16 @@ export const Input = styled.input`
     box-shadow: 0 0 0 3px #fea;
   }
 `;
+
+const Pesquisa = ({ name, label, type, placeholder }) => {
+  return (
+    <Container>
+      <Label htmlFor={name}>
+        {label}
+      </Label>
+      <Input id={name} name={name} type={type} placeholder={placeholder} />
+    </Container>
+  );
+};
+
+export default Pesquisa;
