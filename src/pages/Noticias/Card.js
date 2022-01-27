@@ -1,15 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Botao from '../../components/Botao';
 
 const Container = styled.article`
   display: grid;
   grid-template-columns: 218px 1fr;
-  grid-template-rows: 60px 1fr 20px;
+  grid-template-rows: 60px 1fr 50px;
   grid-template-areas:
     'imagem titulo'
-    'imagem descricao '
-    'imagem link-noticia';
+    'imagem descricao'
+    'imagem link';
   column-gap: 20px;
   margin: 40px;
   padding: 20px;
@@ -31,10 +31,11 @@ const Descricao = styled.h4`
   grid-area: descricao;
 `;
 
-const LinkNoticia = styled.a`
-  grid-area: link-noticia;
+const LinkNoticia = styled.div`
+  grid-area: link;
+  width: 150px;
   justify-self: end;
-  margin: 0 20px;
+  align-self: center;
 `;
 
 const Card = ({ titulo, descricao, imagem, url }) => {
@@ -43,7 +44,9 @@ const Card = ({ titulo, descricao, imagem, url }) => {
       <Imagem src={imagem} />
       <Titulo>{titulo}</Titulo>
       <Descricao>{descricao}</Descricao>
-      <LinkNoticia>Link</LinkNoticia>
+      <LinkNoticia>
+        <Botao onClick={() => window.open(url)}>Link</Botao>
+      </LinkNoticia>
     </Container>
   );
 };
