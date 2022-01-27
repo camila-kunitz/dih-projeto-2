@@ -2,6 +2,8 @@ import React from 'react';
 import Pesquisa from '../../components/Pesquisa';
 import Card from './Card';
 import styled from 'styled-components';
+import { mapToNoticiasObject } from '../../data/data-utils';
+import { NOTICIAS_GET } from '../../api';
 
 const Titulo = styled.h2`
   color: tomato;
@@ -15,22 +17,15 @@ const PesquisaContainer = styled.div`
 const Noticias = () => {
   const [noticias, setNoticias] = React.useState([]);
 
-  const fetchNoticias = () => {
-    fetch('https://mmo-games.p.rapidapi.com/latestnews', {
-      method: 'GET',
-      headers: {
-        'x-rapidapi-host': 'mmo-games.p.rapidapi.com',
-        'x-rapidapi-key': '4e45cbadfemsh5d63995c383d3e6p155566jsn1cfc45c2b053',
-      },
-    })
+  React.useEffect(() => {
+    const { url, options } = NOTICIAS_GET();
+
+    fetch(url, options)
       .then((response) => response.json())
       .then((resultado) => {
-        setNoticias(resultado);
+        const resultadoMapeado = mapToNoticiasObject(resultado);
+        setNoticias(resultadoMapeado);
       });
-  };
-
-  React.useEffect(() => {
-    fetchNoticias();
   }, []);
 
   return (
@@ -47,9 +42,9 @@ const Noticias = () => {
       {noticias.map((noticia) => (
         <Card
           key={noticia.id}
-          titulo={noticia.title}
-          descricao={noticia.short_description}
-          imagem={noticia.thumbnail}
+          titulo={noticia.titulo}
+          descricao={noticia.descricao}
+          imagem={noticia.imagem}
           url={noticia.url}
         />
       ))}
