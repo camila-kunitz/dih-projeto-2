@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   font-size: 1rem;
   font-family: var(--type-first);
   cursor: pointer;
@@ -23,9 +22,3 @@ const StyledButton = styled.button`
     cursor: wait;
   }
 `;
-
-const Botao = ({ ...props }) => {
-  return <StyledButton {...props} />;
-};
-
-export default Botao;

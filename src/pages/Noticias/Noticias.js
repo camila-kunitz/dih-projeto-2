@@ -1,18 +1,9 @@
 import React from 'react';
-import Pesquisa from '../../components/Pesquisa';
-import Card from './Card';
-import styled from 'styled-components';
+import { Titulo, PesquisaContainer } from './Noticias.styles';
+import Pesquisa from '../../components/Pesquisa/Pesquisa';
+import Card from './Card/Card';
 import { mapToNoticiasObject } from '../../data/data-utils';
 import { NOTICIAS_GET } from '../../api';
-
-const Titulo = styled.h2`
-  color: tomato;
-  padding: 40px;
-`;
-
-const PesquisaContainer = styled.div`
-  margin: 0 40px;
-`;
 
 const Noticias = () => {
   const [noticias, setNoticias] = React.useState([]);
