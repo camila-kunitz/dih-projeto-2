@@ -10,7 +10,7 @@ export const temaLight = {
 export const temaDark = {
   backgroundColor1: 'white',
   backgroundColor2: '#C0C0C0',
-  cor1: 'black',
+  color1: 'black',
   color2: 'blue',
 };
 
@@ -23,6 +23,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${(props) => props.theme.backgroundColor1}
+    background-color: ${(props) => props.theme.backgroundColor1};
   }
 `;
