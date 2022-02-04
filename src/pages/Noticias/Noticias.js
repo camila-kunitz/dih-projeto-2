@@ -6,7 +6,9 @@ import { mapToNoticiasObject } from '../../data/data-utils';
 import { NOTICIAS_GET } from '../../api';
 
 const Noticias = () => {
-  const [noticias, setNoticias] = React.useState([]);
+  const [todasNoticias, setTodasNoticias] = React.useState([]);
+  const [noticiasFiltradas, setNoticiasFiltradas] = React.useState([]);
+  const [busca, setBusca] = React.useState('');
 
   React.useEffect(() => {
     const { url, options } = NOTICIAS_GET();
@@ -15,9 +17,19 @@ const Noticias = () => {
       .then((response) => response.json())
       .then((resultado) => {
         const resultadoMapeado = mapToNoticiasObject(resultado);
-        setNoticias(resultadoMapeado);
+        setTodasNoticias(resultadoMapeado);
+        setNoticiasFiltradas(resultadoMapeado);
       });
   }, []);
+
+  const handleBusca = (valorBusca) => {
+    setBusca(valorBusca);
+    const reg = new RegExp(valorBusca, 'gi');
+    const noticiasFiltradas = todasNoticias.filter((noticia) =>
+      noticia.titulo.match(reg),
+    );
+    setNoticiasFiltradas(noticiasFiltradas);
+  };
 
   return (
     <>
@@ -27,10 +39,12 @@ const Noticias = () => {
           name="noticia"
           label="Pesquise uma notícia"
           type="text"
-          placeholder="Digite o título de uma notícia.."
+          placeholder="Digite o título de uma notícia..."
+          value={busca}
+          onChange={handleBusca}
         />
       </PesquisaContainer>
-      {noticias.map((noticia) => (
+      {noticiasFiltradas.map((noticia) => (
         <Card
           key={noticia.id}
           titulo={noticia.titulo}
