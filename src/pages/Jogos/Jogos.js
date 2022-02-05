@@ -45,6 +45,22 @@ const Jogos = () => {
         />
       </PesquisaContainer>
       <JogosContainer>
+        {jogosFiltrados.length === 0 ? (
+          <span>Carregando...</span>
+        ) : (
+          jogosFiltrados.map((jogo) => (
+            <Card
+              key={jogo.id}
+              imagem={jogo.imagem}
+              titulo={jogo.titulo}
+              genero={jogo.genero}
+              descricao={jogo.descricao}
+            />
+          ))
+        )}
+      </JogosContainer>
+
+      {/* <JogosContainer>
         {jogosFiltrados.map((jogo) => (
           <Card
             key={jogo.id}
@@ -54,7 +70,7 @@ const Jogos = () => {
             descricao={jogo.descricao}
           />
         ))}
-      </JogosContainer>
+      </JogosContainer> */}
     </>
   );
 };

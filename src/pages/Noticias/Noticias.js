@@ -49,15 +49,19 @@ const Noticias = () => {
         />
       </PesquisaContainer>
       <NoticiasContainer>
-        {noticiasFiltradas.map((noticia) => (
-          <Card
-            key={noticia.id}
-            titulo={noticia.titulo}
-            descricao={noticia.descricao}
-            imagem={noticia.imagem}
-            url={noticia.url}
-          />
-        ))}
+        {todasNoticias.length === 0 ? (
+          <span style={{ margin: '20px' }}>Carregando...</span>
+        ) : (
+          noticiasFiltradas.map((noticia) => (
+            <Card
+              key={noticia.id}
+              titulo={noticia.titulo}
+              descricao={noticia.descricao}
+              imagem={noticia.imagem}
+              url={noticia.url}
+            />
+          ))
+        )}
       </NoticiasContainer>
     </>
   );
