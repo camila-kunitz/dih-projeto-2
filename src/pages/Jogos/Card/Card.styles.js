@@ -42,5 +42,5 @@ export const Descricao = styled.p`
 `;
 
 export const LinkJogo = styled.div`
-  margin: 10px auto 0;
+  margin: 20px auto 0;
 `;

@@ -13,5 +13,5 @@ export const JogosContainer = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 40px 0 70px 0;
+  margin: 30px 0 70px 0;
 `;
