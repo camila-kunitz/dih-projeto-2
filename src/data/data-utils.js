@@ -9,3 +9,15 @@ export function mapToNoticiasObject(noticias) {
     };
   });
 }
+
+export function mapToJogosObject(jogos) {
+  return jogos.map((game) => {
+    return {
+      id: game.id,
+      titulo: game.title,
+      descricao: game.short_description,
+      imagem: game.thumbnail,
+      genero: game.genre,
+    };
+  });
+}

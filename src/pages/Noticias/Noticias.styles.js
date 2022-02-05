@@ -8,3 +8,7 @@ export const Titulo = styled.h2`
 export const PesquisaContainer = styled.div`
   margin: 0 40px;
 `;
+
+export const NoticiasContainer = styled.section`
+  margin: 40px 20px 80px 20px;
+`;

@@ -1,5 +1,9 @@
 import React from 'react';
-import { Titulo, PesquisaContainer } from './Noticias.styles';
+import {
+  Titulo,
+  PesquisaContainer,
+  NoticiasContainer,
+} from './Noticias.styles';
 import Pesquisa from '../../components/Pesquisa/Pesquisa';
 import Card from './Card/Card';
 import { mapToNoticiasObject } from '../../data/data-utils';
@@ -44,15 +48,17 @@ const Noticias = () => {
           onChange={handleBusca}
         />
       </PesquisaContainer>
-      {noticiasFiltradas.map((noticia) => (
-        <Card
-          key={noticia.id}
-          titulo={noticia.titulo}
-          descricao={noticia.descricao}
-          imagem={noticia.imagem}
-          url={noticia.url}
-        />
-      ))}
+      <NoticiasContainer>
+        {noticiasFiltradas.map((noticia) => (
+          <Card
+            key={noticia.id}
+            titulo={noticia.titulo}
+            descricao={noticia.descricao}
+            imagem={noticia.imagem}
+            url={noticia.url}
+          />
+        ))}
+      </NoticiasContainer>
     </>
   );
 };

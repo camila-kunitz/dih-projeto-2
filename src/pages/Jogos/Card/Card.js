@@ -11,19 +11,16 @@ import {
   Titulo,
 } from './Card.styles';
 
-const Card = (props) => {
-  const descricao =
-    'Gather your friends, forge your weapons, and hunt ferocious behemoths in Dauntless, the co-op multiplayer RPG from Phoenix Labs, a studio consisting of developers from some of the biggest MMORPG ever made. Set adrift in a lush fantasy world known as the Shattered Isles, "Slayers" must band together to contend with a harsh environment and even harsher enemies Each Slayer can choose his or her weapon and attack style, from lightning-fast sword attacks to powerful axe strikes.';
-
+const Card = ({ imagem, titulo, genero, descricao }) => {
   return (
     <>
       <Container>
-        <Imagem src="https:\/\/www.mmobomb.com\/g\/1\/thumbnail.jpg" />
+        <Imagem src={imagem} />
         <JogoContainer>
-          <Titulo>Teste</Titulo>
-          <Genero>MMORPG</Genero>
+          <Titulo>{titulo}</Titulo>
+          <Genero>{genero}</Genero>
         </JogoContainer>
-        <Descricao>{`${descricao.substring(0, 150)}...`}</Descricao>
+        <Descricao>{`${descricao.substring(0, 100)}...`}</Descricao>
         <LinkJogo>
           <Botao>Ver Mais</Botao>
         </LinkJogo>

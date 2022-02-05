@@ -18,11 +18,12 @@ export const JogoContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
   margin-top: 10px;
   margin-bottom: 10px;
 `;
 
-export const Titulo = styled.h3`
+export const Titulo = styled.h4`
   text-transform: uppercase;
 `;
 

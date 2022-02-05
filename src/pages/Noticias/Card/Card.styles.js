@@ -9,7 +9,7 @@ export const Container = styled.article`
     'imagem descricao'
     'imagem link';
   column-gap: 20px;
-  margin: 40px;
+  margin: 20px;
   padding: 20px;
   border: 1px solid #aaa;
   border-radius: 0.4rem;
