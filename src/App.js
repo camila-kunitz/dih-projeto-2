@@ -9,7 +9,7 @@ import { GlobalStyle, temaLight, temaDark } from './themes/tema';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => {
-  const [tema, setTema] = React.useState('dark');
+  const [tema, setTema] = React.useState('light');
 
   const handleTema = () => {
     tema === 'dark' ? setTema('light') : setTema('dark');
@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <>
-      <ThemeProvider theme={tema === 'dark' ? temaDark : temaLight}>
+      <ThemeProvider theme={tema === 'light' ? temaDark : temaLight}>
         <GlobalStyle />
         <Header tema={tema} handleTema={handleTema} />
         <BrowserRouter>
