@@ -4,11 +4,13 @@ import Pesquisa from '../../components/Pesquisa/Pesquisa';
 import Card from './Card/Card';
 import { Titulo, PesquisaContainer, JogosContainer } from './Jogos.styles';
 import { mapToJogosObject } from '../../data/data-utils';
+import { useNavigate } from 'react-router-dom';
 
 const Jogos = () => {
   const [todosJogos, setTodosJogos] = React.useState([]);
   const [jogosFiltrados, setJogosFiltrados] = React.useState([]);
   const [busca, setBusca] = React.useState('');
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     const { url, options } = JOGOS_GET();
@@ -31,6 +33,10 @@ const Jogos = () => {
     setJogosFiltrados(jogosFiltrados);
   };
 
+  const handleJogoClick = (id) => {
+    navigate(`/jogo/${id}`);
+  };
+
   return (
     <>
       <Titulo>Jogos</Titulo>
@@ -51,26 +57,16 @@ const Jogos = () => {
           jogosFiltrados.map((jogo) => (
             <Card
               key={jogo.id}
+              id={jogo.id}
               imagem={jogo.imagem}
               titulo={jogo.titulo}
               genero={jogo.genero}
               descricao={jogo.descricao}
+              handleJogoClick={handleJogoClick}
             />
           ))
         )}
       </JogosContainer>
-
-      {/* <JogosContainer>
-        {jogosFiltrados.map((jogo) => (
-          <Card
-            key={jogo.id}
-            imagem={jogo.imagem}
-            titulo={jogo.titulo}
-            genero={jogo.genero}
-            descricao={jogo.descricao}
-          />
-        ))}
-      </JogosContainer> */}
     </>
   );
 };

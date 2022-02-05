@@ -11,7 +11,7 @@ import {
   Titulo,
 } from './Card.styles';
 
-const Card = ({ imagem, titulo, genero, descricao }) => {
+const Card = ({ id, imagem, titulo, genero, descricao, handleJogoClick }) => {
   return (
     <>
       <Container>
@@ -22,7 +22,7 @@ const Card = ({ imagem, titulo, genero, descricao }) => {
         </JogoContainer>
         <Descricao>{`${descricao.substring(0, 100)}...`}</Descricao>
         <LinkJogo>
-          <Botao>Ver Mais</Botao>
+          <Botao onClick={() => handleJogoClick(id)}>Ver Mais</Botao>
         </LinkJogo>
       </Container>
     </>
@@ -30,10 +30,12 @@ const Card = ({ imagem, titulo, genero, descricao }) => {
 };
 
 Card.propTypes = {
+  id: PropTypes.number.isRequired,
   imagem: PropTypes.string.isRequired,
   titulo: PropTypes.string.isRequired,
   genero: PropTypes.string.isRequired,
   descricao: PropTypes.string.isRequired,
+  handleJogoClick: PropTypes.func.isRequired,
 };
 
 export default Card;
