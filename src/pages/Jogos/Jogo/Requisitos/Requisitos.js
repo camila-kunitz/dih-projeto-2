@@ -29,7 +29,13 @@ const Requisitos = ({ requisitos }) => {
 };
 
 Requisitos.propTypes = {
-  requisitos: PropTypes.object.isRequired,
+  requisitos: PropTypes.shape({
+    sistema: PropTypes.string.isRequired,
+    processador: PropTypes.string.isRequired,
+    memoria: PropTypes.string.isRequired,
+    graficos: PropTypes.string.isRequired,
+    espaco: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Requisitos;

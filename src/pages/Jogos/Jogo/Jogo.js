@@ -6,6 +6,7 @@ import { mapToJogoObject } from '../../../data/data-utils';
 import Header from './Header/Header';
 import Detalhes from './Detalhes/Detalhes';
 import Requisitos from './Requisitos/Requisitos';
+import Slide from './Slide/Slide';
 
 const Jogo = () => {
   const { idJogo } = useParams();
@@ -26,6 +27,7 @@ const Jogo = () => {
   return (
     <Container>
       <Header titulo={jogo.titulo} data={jogo.dataLancamento} />
+      <Slide slides={jogo.imagens} />
       <Detalhes
         genero={jogo.genero}
         plataforma={jogo.plataforma}
