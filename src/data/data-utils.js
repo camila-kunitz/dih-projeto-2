@@ -10,8 +10,8 @@ export function mapToNoticiasObject(noticias) {
   });
 }
 
-export function mapToJogosObject(jogos) {
-  return jogos.map((game) => {
+export function mapToJogosObject(games) {
+  return games.map((game) => {
     return {
       id: game.id,
       titulo: game.title,
@@ -20,4 +20,26 @@ export function mapToJogosObject(jogos) {
       genero: game.genre,
     };
   });
+}
+
+export function mapToJogoObject(game) {
+  return {
+    id: game.id,
+    titulo: game.title,
+    dataLancamento: new Date(game.release_date).toLocaleDateString(),
+    descricao: game.short_description,
+    genero: game.genre,
+    plataforma: game.platform,
+    requisistos: {
+      sistema: game.minimum_system_requirements.os,
+      processador: game.minimum_system_requirements.processor,
+      memoria: game.minimum_system_requirements.memory,
+      graficos: game.minimum_system_requirements.graphics,
+      espaco: game.minimum_system_requirements.storage,
+    },
+    imagens: game.screenshots.map((imagem) => ({
+      id: imagem.id,
+      imagem: imagem.image,
+    })),
+  };
 }

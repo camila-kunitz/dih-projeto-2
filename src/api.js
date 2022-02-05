@@ -25,3 +25,16 @@ export function JOGOS_GET() {
     },
   };
 }
+
+export function JOGO_GET(id) {
+  return {
+    url: API_URL + `/game?id=${id}`,
+    options: {
+      method: 'GET',
+      headers: {
+        'x-rapidapi-host': 'mmo-games.p.rapidapi.com',
+        'x-rapidapi-key': '4e45cbadfemsh5d63995c383d3e6p155566jsn1cfc45c2b053',
+      },
+    },
+  };
+}
