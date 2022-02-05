@@ -15,4 +15,6 @@ export const Container = styled.footer`
 
 export const Destaque = styled.span`
   font-weight: 500;
+  color: ${(props) => props.theme.color3};
+  cursor: pointer;
 `;

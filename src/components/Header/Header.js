@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Logo, Navbar, NavLink, BotaoTema } from './Header.styles';
+import { BsMoonStarsFill, BsFillSunFill } from 'react-icons/bs';
 
 const Header = ({ tema, handleTema }) => {
   return (
@@ -9,7 +10,9 @@ const Header = ({ tema, handleTema }) => {
       <Navbar>
         <NavLink href="/">Notícias</NavLink>
         <NavLink href="/jogos">Jogos</NavLink>
-        <BotaoTema onClick={() => handleTema()}>{tema}</BotaoTema>
+        <BotaoTema onClick={() => handleTema()}>
+          {tema === 'dark' ? <BsMoonStarsFill /> : <BsFillSunFill />}
+        </BotaoTema>
       </Navbar>
     </Container>
   );

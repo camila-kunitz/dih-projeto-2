@@ -35,13 +35,13 @@ export const NavLink = styled.a`
 
 export const BotaoTema = styled.button`
   height: 40px;
-  width: 80px;
+  width: 40px;
   margin-left: 20px;
   color: ${(props) => props.theme.color1};
   background-color: ${(props) => props.theme.color2};
   font-weight: bold;
   border: 0px;
-  border-radius: 50px;
+  border-radius: 50%;
   &:hover {
     color: ${(props) => props.theme.color1};
     background-color: ${(props) => props.theme.color3};

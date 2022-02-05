@@ -4,7 +4,7 @@ export const Container = styled.section`
   margin: 40px 20px;
   padding: 20px;
   background-color: ${(props) => props.theme.color2};
-  border: 1px solid ${(props) => props.theme.color3};
+  border: 1px solid ${(props) => props.theme.color1};
   border-radius: 0.4em;
 `;
 

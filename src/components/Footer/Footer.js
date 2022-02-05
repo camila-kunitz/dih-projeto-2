@@ -5,7 +5,8 @@ const Footer = () => {
   return (
     <>
       <Container>
-        Site desenvolvido por <Destaque>Camila Kunitz</Destaque>
+        Site desenvolvido por
+        <Destaque> Camila Kunitz</Destaque>
       </Container>
     </>
   );
