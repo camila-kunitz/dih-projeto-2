@@ -40,6 +40,7 @@ const Jogos = () => {
           label="Pesquise um jogo"
           type="text"
           placeholder="Digite o título de um jogo..."
+          value={busca}
           onChange={handleBusca}
         />
       </PesquisaContainer>

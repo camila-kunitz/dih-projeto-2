@@ -29,6 +29,11 @@ const Card = ({ imagem, titulo, genero, descricao }) => {
   );
 };
 
-Card.propTypes = {};
+Card.propTypes = {
+  imagem: PropTypes.string.isRequired,
+  titulo: PropTypes.string.isRequired,
+  genero: PropTypes.string.isRequired,
+  descricao: PropTypes.string.isRequired,
+};
 
 export default Card;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Container,
   Imagem,
@@ -19,6 +20,13 @@ const Card = ({ titulo, descricao, imagem, url }) => {
       </LinkNoticia>
     </Container>
   );
+};
+
+Card.propTypes = {
+  titulo: PropTypes.string.isRequired,
+  descricao: PropTypes.string.isRequired,
+  imagem: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
 
 export default Card;

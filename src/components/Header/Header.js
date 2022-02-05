@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Container, Logo, Navbar, NavLink, BotaoTema } from './Header.styles';
 
 const Header = ({ tema, handleTema }) => {
@@ -12,6 +13,11 @@ const Header = ({ tema, handleTema }) => {
       </Navbar>
     </Container>
   );
+};
+
+Header.propTypes = {
+  tema: PropTypes.string.isRequired,
+  handleTema: PropTypes.func.isRequired,
 };
 
 export default Header;
