@@ -30,7 +30,7 @@ export function mapToJogoObject(game) {
     descricao: game.short_description,
     genero: game.genre,
     plataforma: game.platform,
-    requisistos: {
+    requisitos: {
       sistema: game.minimum_system_requirements.os,
       processador: game.minimum_system_requirements.processor,
       memoria: game.minimum_system_requirements.memory,

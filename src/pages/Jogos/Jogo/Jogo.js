@@ -5,6 +5,7 @@ import { JOGO_GET } from '../../../api';
 import { mapToJogoObject } from '../../../data/data-utils';
 import Header from './Header/Header';
 import Detalhes from './Detalhes/Detalhes';
+import Requisitos from './Requisitos/Requisitos';
 
 const Jogo = () => {
   const { idJogo } = useParams();
@@ -30,6 +31,7 @@ const Jogo = () => {
         plataforma={jogo.plataforma}
         descricao={jogo.descricao}
       />
+      <Requisitos requisitos={jogo.requisitos} />
     </Container>
   );
 };
