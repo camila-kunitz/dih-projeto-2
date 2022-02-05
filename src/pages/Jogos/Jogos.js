@@ -2,7 +2,12 @@ import React from 'react';
 import { JOGOS_GET } from '../../api';
 import Pesquisa from '../../components/Pesquisa/Pesquisa';
 import Card from './Card/Card';
-import { Titulo, PesquisaContainer, JogosContainer } from './Jogos.styles';
+import {
+  Container,
+  Titulo,
+  PesquisaContainer,
+  JogosContainer,
+} from './Jogos.styles';
 import { mapToJogosObject } from '../../data/data-utils';
 import { useNavigate } from 'react-router-dom';
 
@@ -38,7 +43,7 @@ const Jogos = () => {
   };
 
   return (
-    <>
+    <Container>
       <Titulo>Jogos</Titulo>
       <PesquisaContainer>
         <Pesquisa
@@ -67,7 +72,7 @@ const Jogos = () => {
           ))
         )}
       </JogosContainer>
-    </>
+    </Container>
   );
 };
 

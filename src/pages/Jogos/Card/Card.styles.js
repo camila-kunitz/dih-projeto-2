@@ -30,7 +30,7 @@ export const Titulo = styled.h4`
 export const Genero = styled.span`
   align-self: flex-end;
   font-size: 10px;
-  font-weight: 200;
+  font-weight: 300;
   padding: 5px;
   border: 1px solid black;
   border-radius: 0.4em;

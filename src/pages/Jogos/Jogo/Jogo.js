@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Container } from './Jogo.styles';
+import { Container, SlideContainer } from './Jogo.styles';
 import { JOGO_GET } from '../../../api';
 import { mapToJogoObject } from '../../../data/data-utils';
 import Header from './Header/Header';
@@ -27,7 +27,9 @@ const Jogo = () => {
   return (
     <Container>
       <Header titulo={jogo.titulo} data={jogo.dataLancamento} />
-      <Slide slides={jogo.imagens} />
+      <SlideContainer>
+        <Slide slides={jogo.imagens} />
+      </SlideContainer>
       <Detalhes
         genero={jogo.genero}
         plataforma={jogo.plataforma}

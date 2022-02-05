@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Container,
   Titulo,
   PesquisaContainer,
   NoticiasContainer,
@@ -36,7 +37,7 @@ const Noticias = () => {
   };
 
   return (
-    <>
+    <Container>
       <Titulo>Notícias</Titulo>
       <PesquisaContainer>
         <Pesquisa
@@ -63,7 +64,7 @@ const Noticias = () => {
           ))
         )}
       </NoticiasContainer>
-    </>
+    </Container>
   );
 };
 

@@ -6,6 +6,10 @@ export const Container = styled.header`
   align-items: center;
   padding: 20px;
   background-color: #666666;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 `;
 
 export const Logo = styled.h1`
