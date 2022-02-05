@@ -4,6 +4,7 @@ import { Container } from './Jogo.styles';
 import { JOGO_GET } from '../../../api';
 import { mapToJogoObject } from '../../../data/data-utils';
 import Header from './Header/Header';
+import Detalhes from './Detalhes/Detalhes';
 
 const Jogo = () => {
   const { idJogo } = useParams();
@@ -24,6 +25,11 @@ const Jogo = () => {
   return (
     <Container>
       <Header titulo={jogo.titulo} data={jogo.dataLancamento} />
+      <Detalhes
+        genero={jogo.genero}
+        plataforma={jogo.plataforma}
+        descricao={jogo.descricao}
+      />
     </Container>
   );
 };
