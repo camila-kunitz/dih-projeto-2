@@ -5,7 +5,7 @@ export const Container = styled.main`
 `;
 
 export const Titulo = styled.h2`
-  color: tomato;
+  color: ${(props) => props.theme.color3};
   padding: 40px;
 `;
 

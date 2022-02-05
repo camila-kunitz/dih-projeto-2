@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <>
-      <ThemeProvider theme={tema === 'light' ? temaDark : temaLight}>
+      <ThemeProvider theme={tema === 'light' ? temaLight : temaDark}>
         <GlobalStyle />
         <Header tema={tema} handleTema={handleTema} />
         <BrowserRouter>

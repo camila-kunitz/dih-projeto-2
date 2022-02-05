@@ -1,17 +1,19 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const temaLight = {
-  backgroundColor1: 'black',
-  backgroundColor2: '#404040',
-  color1: 'white',
-  color2: 'red',
+  backgroundColor1: '#FAF3F3',
+  backgroundColor2: '#E1E5EA',
+  color1: '#444',
+  color2: '#A7BBC7',
+  color3: '#DA7F8F',
 };
 
 export const temaDark = {
-  backgroundColor1: 'white',
-  backgroundColor2: '#C0C0C0',
-  color1: 'black',
-  color2: 'blue',
+  backgroundColor1: '#1A1A2E',
+  backgroundColor2: '#16213E',
+  color1: '#FFF',
+  color2: '#0F3460',
+  color3: '#E94560',
 };
 
 export const GlobalStyle = createGlobalStyle`
@@ -24,5 +26,6 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background-color: ${(props) => props.theme.backgroundColor1};
+    color: ${(props) => props.theme.color1};
   }
 `;

@@ -6,7 +6,8 @@ export const Container = styled.article`
   flex-direction: column;
   margin: 10px;
   padding: 20px;
-  border: 1px solid #aaa;
+  background: ${(props) => props.theme.backgroundColor2};
+  border: 1px solid ${(props) => props.theme.color2};
   border-radius: 0.4rem;
 `;
 
@@ -25,6 +26,7 @@ export const JogoContainer = styled.div`
 
 export const Titulo = styled.h4`
   text-transform: uppercase;
+  color: ${(props) => props.theme.color1};
 `;
 
 export const Genero = styled.span`
@@ -32,13 +34,15 @@ export const Genero = styled.span`
   font-size: 10px;
   font-weight: 300;
   padding: 5px;
-  border: 1px solid black;
+  color: ${(props) => props.theme.color3};
+  border: 1px solid ${(props) => props.theme.color3};
   border-radius: 0.4em;
 `;
 
 export const Descricao = styled.p`
   font-size: 12px;
   font-weight: 300;
+  color: ${(props) => props.theme.color1};
 `;
 
 export const LinkJogo = styled.div`

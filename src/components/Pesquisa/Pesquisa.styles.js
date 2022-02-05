@@ -12,19 +12,21 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-  border: 1px solid #eee;
+  border: 1px solid ${(props) => props.theme.color2};
   display: block;
   width: 100%;
   font-size: 1rem;
   padding: 0.8rem;
   border-radius: 0.4rem;
-  background: #eee;
+  color: ${(props) => props.theme.color1};
+  background: ${(props) => props.theme.backgroundColor2};
   transition: 0.1s;
   &:focus,
   &:hover {
     outline: none;
-    border-color: #fb1;
-    background: white;
-    box-shadow: 0 0 0 3px #fea;
+    border-color: ${(props) => props.theme.color2};
+    color: ${(props) => props.theme.color1};
+    background: ${(props) => props.theme.backgroundColor1};
+    box-shadow: 0 0 0 3px ${(props) => props.theme.color3};
   }
 `;

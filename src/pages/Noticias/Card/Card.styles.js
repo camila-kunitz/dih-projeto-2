@@ -11,8 +11,9 @@ export const Container = styled.article`
   column-gap: 20px;
   margin: 20px;
   padding: 20px;
-  border: 1px solid #aaa;
+  border: 1px solid ${(props) => props.theme.color2};
   border-radius: 0.4rem;
+  background: ${(props) => props.theme.backgroundColor2};
 `;
 
 export const Imagem = styled.img`
@@ -22,7 +23,7 @@ export const Imagem = styled.img`
 
 export const Titulo = styled.h3`
   grid-area: titulo;
-  color: #fb1;
+  color: ${(props) => props.theme.color3};
 `;
 
 export const Descricao = styled.h4`

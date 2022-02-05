@@ -23,7 +23,7 @@ const Jogo = () => {
       });
   }, []);
 
-  if (jogo === null) return <span>Carregando...</span>;
+  if (jogo === null) return <Container>Carregando...</Container>;
   return (
     <Container>
       <Header titulo={jogo.titulo} data={jogo.dataLancamento} />

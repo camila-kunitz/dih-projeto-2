@@ -12,6 +12,8 @@ export const DadoContainer = styled.div`
   margin: 20px;
 `;
 
-export const Titulo = styled.h4``;
+export const Titulo = styled.h4`
+  color: ${(props) => props.theme.color3};
+`;
 
 export const Valor = styled.p``;
