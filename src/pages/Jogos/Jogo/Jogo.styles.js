@@ -6,12 +6,3 @@ export const Container = styled.main`
   border: 1px solid #aaa;
   border-radius: 0.4em;
 `;
-
-export const Titulo = styled.h2`
-  color: tomato;
-`;
-
-export const Lancamento = styled.span`
-  font-weight: 300;
-  margin-left: 20px;
-`;
