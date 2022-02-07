@@ -12,7 +12,7 @@ import {
 } from './Formulario.styles';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
-import Botao from '../../../../components/Botao/Botao';
+import Botao from '../../../components/Botao/Botao';
 import Input from './Input/Input';
 import TextArea from './TextArea/TextArea';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Conteudo, Item, Navegacao } from './Slide.styles';
-import Botao from '../../../../components/Botao/Botao';
+import Botao from '../../../components/Botao/Botao';
 
 const Slide = ({ slides }) => {
   const [ativo, setAtivo] = React.useState(0);

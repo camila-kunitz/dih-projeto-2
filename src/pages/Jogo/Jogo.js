@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, SlideContainer } from './Jogo.styles';
-import { JOGO_GET } from '../../../api';
-import { mapToJogoObject } from '../../../data/data-utils';
+import { JOGO_GET } from '../../api';
+import { mapToJogoObject } from '../../data/data-utils';
 import Header from './Header/Header';
 import Detalhes from './Detalhes/Detalhes';
 import Requisitos from './Requisitos/Requisitos';
@@ -22,7 +22,7 @@ const Jogo = () => {
         const resultadoMapeado = mapToJogoObject(resultado);
         setJogo(resultadoMapeado);
       });
-  }, []);
+  }, [idJogo]);
 
   if (jogo === null) return <Container>Carregando...</Container>;
   return (
