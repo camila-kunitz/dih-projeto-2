@@ -7,6 +7,7 @@ import Header from './Header/Header';
 import Detalhes from './Detalhes/Detalhes';
 import Requisitos from './Requisitos/Requisitos';
 import Slide from './Slide/Slide';
+import Formulario from './Formulario/Formulario';
 
 const Jogo = () => {
   const { idJogo } = useParams();
@@ -36,6 +37,7 @@ const Jogo = () => {
         descricao={jogo.descricao}
       />
       <Requisitos requisitos={jogo.requisitos} />
+      <Formulario idJogo={idJogo} />
     </Container>
   );
 };
