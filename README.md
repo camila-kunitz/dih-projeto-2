@@ -11,6 +11,8 @@ Segundo projeto do DEVinHouse - 4° Edição.
 - Em seguida, rode o comando `npm start` para iniciar o projeto React;
 - O projeto então pode ser acessado no endereço `http://localhost:3000/`.
 
+Ou é possivel visualizar o projeto na Netlify: [Deploy](https://devinmmo-camila-kunitz.netlify.app/)
+
 ## Funcionalidades da aplicação:
 
 ### Troca de tema
